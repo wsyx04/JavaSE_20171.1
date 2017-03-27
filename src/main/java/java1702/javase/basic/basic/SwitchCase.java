@@ -1,3 +1,5 @@
+package java1702.javase.basic.basic;
+
 import java.util.Scanner;
 
     /**
@@ -17,7 +19,10 @@ public class SwitchCase {
                 System.out.println("s>90");
                 break;
             case "B":
+
                 System.out.println("s>80");
+
+
                 break;
             case "C":
                 System.out.println("s>60");

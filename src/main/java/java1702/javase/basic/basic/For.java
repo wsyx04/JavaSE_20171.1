@@ -1,4 +1,6 @@
-    /**
+package java1702.javase.basic.basic;
+
+/**
      * Created by 王洪博 on 2017/3/8.
      */
 public class For {
@@ -16,7 +18,7 @@ public class For {
         for (int i = 0; i <10 ; i++) {
             System.out.println("i:" + i);
             for (int j = 0; j <10 ; j++) {
-                System.out.println("\tj:" + j);
+                System.out.println("j:" + j);
 
             }
 

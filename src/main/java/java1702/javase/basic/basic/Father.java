@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.basic.basic;
 
 /**
     * Created by 王洪博 on 2017/3/16.
@@ -6,7 +6,7 @@ package java1702.javase.basic;
 public class Father {
         int money;
         public void coding() {
-            System.out.println("java1702.javase.basic.Father is coding...");
+            System.out.println("java1702.javase.basic.basic.Father is coding...");
         }
 }
 

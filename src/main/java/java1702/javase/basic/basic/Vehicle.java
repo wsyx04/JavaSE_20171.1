@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.basic.basic;
 
 /**
      * Created by 王洪博 on 2017/3/15.
@@ -14,22 +14,22 @@ public class Vehicle {
             this.price = price;
             this.color = color;
         }
-//        public java1702.javase.basic.Vehicle() {
+//        public java1702.javase.basic.basic.Vehicle() {
 //        }
-      /*  public java1702.javase.basic.Vehicle() {
+      /*  public java1702.javase.basic.basic.Vehicle() {
             System.out.println("Vechicle constructor...");
         }*/
         public void start() {
-        System.out.println("java1702.javase.basic.Vehicle is starting");
+        System.out.println("java1702.javase.basic.basic.Vehicle is starting");
     }
     public void stop() {
-        System.out.println("java1702.javase.basic.Vehicle is stopped");
+        System.out.println("java1702.javase.basic.basic.Vehicle is stopped");
     }
 }
 class Bicycle extends Vehicle {
     String type;//山地车
-//    public java1702.javase.basic.Bicycle() {
-//        System.out.println("java1702.javase.basic.Bicycle constructor..");
+//    public java1702.javase.basic.basic.Bicycle() {
+//        System.out.println("java1702.javase.basic.basic.Bicycle constructor..");
 //    }
 
     @Override
@@ -47,21 +47,21 @@ class Bicycle extends Vehicle {
         super(name, weight, price, color);
     }
 }
-//    public java1702.javase.basic.Bicycle(String name, double weight, double price, char color) {
+//    public java1702.javase.basic.basic.Bicycle(String name, double weight, double price, char color) {
 //        super(name, weight, price, color);
 //    }
 //    public void ring() {
-//        System.out.println("java1702.javase.basic.Bicycle is ringing...");
+//        System.out.println("java1702.javase.basic.basic.Bicycle is ringing...");
 //    }
 //}
-//class Ship extends java1702.javase.basic.Vehicle {
+//class Ship extends java1702.javase.basic.basic.Vehicle {
 //double tonnage;// t 排水量
 //
 //    public void anchor() {
 //        System.out.println("Ship is anchor...");
 //    }
 //}
-//class Plane extends java1702.javase.basic.Vehicle {
+//class Plane extends java1702.javase.basic.basic.Vehicle {
 //}
 class VehicleTest {
     public static void main(String[] args) {

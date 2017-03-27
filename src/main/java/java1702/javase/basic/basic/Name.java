@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.basic.basic;
 
 /**
  * Created by 王洪博 on 2017/3/7.

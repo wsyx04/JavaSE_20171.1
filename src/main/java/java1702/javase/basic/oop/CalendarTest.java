@@ -1,7 +1,5 @@
 package java1702.javase.basic.oop;
 
-import java1702.javase.basic.Calculator;
-
 import java.util.Calendar;
 
 /**
