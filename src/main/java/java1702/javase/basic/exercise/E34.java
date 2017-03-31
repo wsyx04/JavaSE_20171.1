@@ -1,6 +1,7 @@
 package java1702.javase.basic.exercise;
 
 import java.util.Date;
+import java.util.Hashtable;
 import java.util.Random;
 
 /**
@@ -26,6 +27,10 @@ public class E34 {
         }
         System.out.println((1500000000000L - System.currentTimeMillis())/1000/60/60/24);
         System.out.println(new Date(1500000000000L));
+
+        Hashtable<Integer,String> hashtable = new Hashtable<>();
+
+
 
 
     }
