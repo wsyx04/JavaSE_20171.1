@@ -47,85 +47,32 @@ public class ArrayVector {
         return capacity;
     }
 
+    public String remove(int index) {
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);
+        }
+        String s = strings[index];
+        System.arraycopy(strings, index + 1, strings, index, size - index - 1);
+        strings[size - 1] = null;
+        size--;
+        return s;
+
+    }
+
+    public String set(int index, String element) {
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);
+        }
+        String s = strings[index];
+        strings[index] = element;
+        return s;
+    }
 
     public static void main(String[] args) {
         ArrayVector arrayVector = new ArrayVector(2);
         arrayVector.add("hello");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
-        arrayVector.add("hi");
         arrayVector.add("hi");
         System.out.println(arrayVector.size());
         System.out.println(arrayVector.capacity());

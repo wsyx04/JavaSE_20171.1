@@ -12,9 +12,10 @@ public class StringCopyTest {
         int[] srcArray = {1,2,3,4,5,6};
         int[] destArray = new int[10];
 
-        System.out.println(Arrays.toString(destArray));
-        System.arraycopy(srcArray,1,destArray,6,4);
-        System.out.println(Arrays.toString(destArray));
+//        System.out.println(Arrays.toString(destArray));
+//        System.arraycopy(srcArray,1,destArray,6,4);
+//        System.out.println(Arrays.toString(destArray));
         String[] strings = {"a","b","c","d",null,null,null,null,null,null,};
+        System.out.println(Arrays.toString(strings));
     }
 }
