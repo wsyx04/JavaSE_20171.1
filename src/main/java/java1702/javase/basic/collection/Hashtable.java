@@ -23,10 +23,10 @@ public class Hashtable {
         for (String s : hashtable.values()) {
             System.out.println(s);
         }
+
         for (Map.Entry<Integer, String> integerStringEntry : hashtable.entrySet()) {
             System.out.println(integerStringEntry.getKey() + "->" + integerStringEntry.getValue());
         }
-
     }
 
 

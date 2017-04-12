@@ -59,7 +59,7 @@ public class ArrayVector {
         return s;
 
     }
-
+       boolean a = (9 >= 10);
     public String set(int index, String element) {
         if (index >= size) {
             System.out.println("error.");

@@ -8,7 +8,11 @@ package java2017.kaoshi;
 // 然后求出主对角线（从左上角到右下角）上元素之和以及副对角线上元素之乘积。
 public class C1 {
     public static void main(String[] args) {
+    int[][] ints = new int[4][4];
 
+        for (int i = 0; i < ints.length; i++) {
+
+        }
     }
 
 }
