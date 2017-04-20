@@ -15,9 +15,7 @@ public class ArrayListLinkedList {
         long m1 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         System.out.println(m1);
         for (int i = 0; i < 10000000; i++) {
-
             linkedList.add(i + "");
-
         }
         long m2 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         System.out.println(m2);
