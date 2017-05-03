@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var patt1 = /e/;
+        console.log(patt1.test("hello"))
+        var patt2 = /l/g;
+        patt1.compile('l', 'g');
+        var result = patt1.exec("hello");
+        do {
+            console.log(result);
+            result = patt1.exec("hello");
+        } while (result != null);
+
+        var patt3 = /e/i;
+        console.log(patt3.test('HELLO'));
+        var patt4 = /w3school/i;
+        console.log('Visit W3School...'.match(patt4))
+    </script>
+</head>
+<body>
+RegExp = Regular Expression 正则 表达式
+Email
+tester@test.com
+</body>
+</html>

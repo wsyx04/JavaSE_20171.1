@@ -19,3 +19,4 @@ class GenericInterfaceTestImpl<T extends Number> implements GenericInterfaceTest
 
     }
 }
+

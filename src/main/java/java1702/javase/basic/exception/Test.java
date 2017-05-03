@@ -18,7 +18,7 @@ public class Test {
         System.out.println(1 / 1);
         System.out.println(Integer.valueOf("123"));
         String s = "123";
-//        s = null;
+        s = null;
         System.out.println(s.length());
         System.out.println("完了");
 

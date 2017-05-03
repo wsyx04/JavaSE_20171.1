@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var patt = /[^0-9]/g;
+        console.log('adcf123456'.match(patt));
+        var patt = /[A-z]/g;
+        console.log('adcfAZ123456'.match(patt));
+        patt.compile('(red|green|blue)', 'gi');
+        console.log('redGreenbBlue'.match(patt));
+        patt.compile('[\u4e00-\u9fbb]', 'ig');
+        console.log('asdfa一阿水电费'.match(patt))
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
