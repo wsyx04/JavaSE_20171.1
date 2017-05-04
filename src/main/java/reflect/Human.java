@@ -1,6 +1,9 @@
 package reflect;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by whb on
@@ -91,7 +94,7 @@ public class Human extends Animal {
 }
 
 class HumanTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         Human human = new Human();
         Class clazz = human.getClass();
         Field[] fields = clazz.getFields();
@@ -104,5 +107,29 @@ class HumanTest {
         for (Field declareField : declareFields) {
             System.out.println(declareField.getName());
         }
+
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(1);
+        }
+        list.add(0);
+        System.out.println(list.size());
+
+//        Field array = list.getClass().getDeclaredField("elementData");
+        Field array = ArrayList.class.getDeclaredField("elementData");
+        array.setAccessible(true);
+        System.out.println("list capacity: " + ((Object[]) array.get(list)).length); // 10
+
+
+        Vector<String> vector = new Vector<>();
+        vector.add("hi");
+        System.out.println(vector.size());
+        System.out.println(vector.capacity());
+
+
+
+
+
     }
 }
+
