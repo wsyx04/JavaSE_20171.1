@@ -1,6 +1,8 @@
 package reflect;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -9,9 +11,10 @@ import java.util.Vector;
  * Created by whb on
  * 2017/5/3 17:30
  */
- class Animal {
+class Animal {
     public int age;
     private double weight;
+
     public Animal() {
     }
 
@@ -19,9 +22,11 @@ import java.util.Vector;
         this.age = age;
         this.weight = weight;
     }
+
     public int sleep(int hours) {
         return hours;
     }
+
     public void eat(String food) {
         System.out.println("eating" + food);
     }
@@ -46,7 +51,7 @@ import java.util.Vector;
         this.weight = weight;
     }
 
- }
+}
 
 public class Human extends Animal {
     public String name;
@@ -94,42 +99,72 @@ public class Human extends Animal {
 }
 
 class HumanTest {
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
-        Human human = new Human();
-        Class clazz = human.getClass();
-        Field[] fields = clazz.getFields();
-        System.out.println("--- getFields() ---");
-        for (Field field : fields) {
-            System.out.println(field.getName());
+//    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+//        Human human = new Human();
+//        Class clazz = human.getClass();
+//        Field[] fields = clazz.getFields();
+//        System.out.println("--- getFields() ---");
+//        for (Field field : fields) {
+//            System.out.println(field.getName());
+//        }
+//        Field[] declareFields = clazz.getDeclaredFields();
+//        System.out.println("--- getDeclaredFields() ---");
+//        for (Field declareField : declareFields) {
+//            System.out.println(declareField.getName());
+//        }
+//
+//        List<Integer> list = new ArrayList<>();
+//        for (int i = 0; i < 10; i++) {
+//            list.add(1);
+//        }
+//        list.add(0);
+//        System.out.println(list.size());
+//
+////        Field array = list.getClass().getDeclaredField("elementData");
+//        Field array = ArrayList.class.getDeclaredField("elementData");
+//        array.setAccessible(true);
+//        System.out.println("list capacity: " + ((Object[]) array.get(list)).length); // 10
+//
+//
+//        Vector<String> vector = new Vector<>();
+//        vector.add("hi");
+//        System.out.println(vector.size());
+//        System.out.println(vector.capacity());
+//    }
+
+    public static void main(String[] args) throws NoSuchMethodException {
+        Class clazz = Human.class;
+
+        Constructor[] constructors = clazz.getConstructors();
+        System.out.println("--- getConstructors() ---");
+        for (Constructor constructor : constructors) {
+            System.out.println(constructor.getName());
+            for (Parameter parameter : constructor.getParameters()) {
+                System.out.println("\t" + parameter.getName());
+            }
         }
-        Field[] declareFields = clazz.getDeclaredFields();
-        System.out.println("--- getDeclaredFields() ---");
-        for (Field declareField : declareFields) {
-            System.out.println(declareField.getName());
+
+        Constructor[] declaredConstructors = clazz.getDeclaredConstructors();
+        System.out.println("--- getDeclaredConstructors() ---");
+        for (Constructor constructor : declaredConstructors) {
+            System.out.println(constructor.getName());
+            for (Parameter parameter : constructor.getParameters()) {
+                System.out.println("\t" + parameter.getName());
+            }
         }
+//        Constructor constructor = clazz.getDeclaredConstructor(int.class, double.class, String.class, boolean.class);
+//        System.out.println(constructor.getName());
+//        for (Parameter parameter : constructor.getParameters()) {
+//            System.out.println(parameter);
+//        }
+        Constructor constructor=clazz.getDeclaredConstructor(int.class, double.class, String.class, boolean.class);
+        System.out.println(constructor.getName());
 
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add(1);
+        for (Parameter parameter : constructor.getParameters()) {
+            System.out.println(parameter);
+
         }
-        list.add(0);
-        System.out.println(list.size());
-
-//        Field array = list.getClass().getDeclaredField("elementData");
-        Field array = ArrayList.class.getDeclaredField("elementData");
-        array.setAccessible(true);
-        System.out.println("list capacity: " + ((Object[]) array.get(list)).length); // 10
-
-
-        Vector<String> vector = new Vector<>();
-        vector.add("hi");
-        System.out.println(vector.size());
-        System.out.println(vector.capacity());
-
-
-
-
-
     }
+
 }
 
